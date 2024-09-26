@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: comic sans ms;
+    
+}
+
+ul {
+    list-style: none;
+    background-size: cover;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* colcoar cor em baixo quando passa o mouse*/
+a:hover {
+    border-bottom: 2px solid rgb(255, 0, 140);
+
+}
+
+.cabecalho {
+    height: 150px;
+    background-image: url(img/imagens/fundo.png);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    background-size: contain;
+}
+
+.cabecalho .logo {
+    display: flex;
+}
+
+.cabecalho .menu {
+    display: flex;
+    gap: 50px;
+    width: 900px;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(1.5px);
+    border-style: solid;
+    border-color: rgb(106, 202, 231);
+    border-radius: 15px;
+    padding: 0;
+    text-align: center;
+
+}
+
+.carrossel img {
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.txtkits {
+    font-style: italic;
+    padding: 50px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*deixa o fundo com outra cor degrade*/
+.txtkits::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #c5f3f3, #f7a1ec);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.txtkits:hover::before {
+    opacity: 1;
+}
+
+.txtkits:hover {
+    transform: translateX(5px) translateY(5px) translateZ(10px);
+}
+
+.carrossel{
+    overflow: hidden;
+    position: relative;
+    box-shadow: 10px 10px 10px gray;
+}
+.carrossel-image{
+    display: flex;
+    animation: moveCarousel 4s infinite; ;
+}
+@keyframes moveCarousel {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    33.33%, 66.66% {
+      transform: translateX(-100%);
+    }
+  }
+  h1{
+    filter:drop-shadow(10px 7px 10px rgb(80, 80, 177));
+  }
+h2{
+    filter:drop-shadow(10px 7px 10px rgb(80, 80, 177));
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+.canetas{
+    display: flex;
+    gap:20px;
+    margin: 0 100px;
+    background-color: aquamarine;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 50px;
+    filter:drop-shadow(10px 7px 10px rgb(108, 108, 204));
+    border-radius: 20px;
+}
+.img_caneta{
+    width: 100%;
+    height: auto;
+
+}
+.add{
+    width: 100%;
+    height: auto;
+}
+.cont_caneta .canetas .li{
+    background-color: rgb(17, 184, 31);
+}
+
+#arco_caneta{
+    display: flex;
+    align-items: center;
+}
+.arco{
+display: flex;
+justify-content: center;
+}
+section{
+    background-color: aliceblue;
+    border-radius: 20px;
+    margin: 40px;
+    filter: drop-shadow(5px 5px 5px gray);
+    height: 650px;
+}
+.lista_prod{
+    transition: transform 0.3s ease-out;
+}
+.lista_prod:hover{
+    transform: translate3D(3px, 3px, 20px);
+}
+#lapis:hover{
+    cursor: url(img/imagens/minicursor.png),auto;
+}
+#caneta:hover{
+    cursor: url(img/imagens/cursor_caneta.png), auto;
+}
+#apontador:hover{
+    cursor: url(img/imagens/cursor_apontador.png), auto;
+}
+#borracha:hover{
+    cursor: url(img/imagens/cursor_borracha.png),auto;
+}
+#blocos:hover{
+    cursor: url(img/imagens/cursor_bloco.png),auto;
+}
+#caderno:hover{
+    cursor: url(img/imagens/cursor-caderno.png),auto;
+}
+#marcat:hover{
+    cursor:url(img/imagens/cursor_marcat.png),auto;
+}
